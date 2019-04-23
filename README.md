@@ -2,7 +2,8 @@
 ROLL THE DICE
 
 ### About
-Roll the dice game.
+Roll the dice game
+
 ### Built With
 HTLM/CSS3/JS
 
