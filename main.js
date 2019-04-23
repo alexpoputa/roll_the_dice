@@ -112,6 +112,7 @@ const compareDices = (playerDice, computerDice) => {
         pScore++;
         updateScore();
         if (pScore === 10) {
+            updateScore();
             finalResult();
         }
         return;
@@ -121,6 +122,7 @@ const compareDices = (playerDice, computerDice) => {
         cScore++;
         updateScore();
         if (cScore === 10) {
+            updateScore();
             finalResult();
         }
         return;
