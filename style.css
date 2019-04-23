@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+
+section {
+    height: 100vh;
+    background: #ADA996;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.score {
+    height: 20vh;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding-top: 120px;
+    transition: opacity 0.7s ease 0.7s;
+}
+
+.score h2 {
+    font-size: 40px;
+}
+
+.score p {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.intro {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.intro p {
+    font-size: 55px;
+}
+
+.intro button,
+.match button {
+    width: 170px;
+    height: 50px;
+    background: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.intro button:hover,
+.match button:hover {
+    background-color: rgb(230, 227, 227);
+}
+
+.intro button.focus,
+.intro button:focus,
+.match button.focus,
+.match button:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.match {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.7s ease 0.7s;
+}
+
+.match-roll {
+    font-size: 55px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.dices {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.roll-btn {
+    margin: 15px;
+}
+
+.info-panel {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    font-size: 35px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.info-text {
+    background-color: #e9e6e6;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 65%;
+    border-radius: 10px;
+}
+
+.info-text h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.info-text p {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 24px;
+    padding-bottom: 15px;
+}
+
+div.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeIn {
+    opacity: 1;
+    pointer-events: all;
+}

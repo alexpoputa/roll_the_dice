@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Roll The Dice</title>
+</head>
+
+<body>
+    <section class="game">
+        <div class="score fadeOut">
+            <div class="player-score">
+                <h2>Player:</h2>
+                <p>0</p>
+            </div>
+            <div class="computer-score">
+                <h2>Computer:</h2>
+                <p>0</p>
+            </div>
+        </div>
+        <div class="intro">
+            <p>Welcome to Roll The Dice!</p>
+            <img src="img/dice-title.png" alt="" width="300px">
+            <button class="start-btn">Start Game!</button>
+            <button class="info-btn">Game Rules</button>
+            <div class="info-panel">
+                <div class="info-text">
+                    <h1>Game Rules</h1>
+                    <p>Both players will roll the dices and the first player who gets a score
+                        of
+                        10, wins.</p>
+                </div>
+            </div>
+        </div>
+        <div class="match fadeOut">
+            <h2 class="match-roll">
+                Roll The Dice!
+            </h2>
+            <div class="dices">
+                <img src="img/dice1.png" alt="" class="player-dice">
+
+                <button class="roll-btn">Roll</button>
+
+                <img src="img/dice1.png" alt="" class="computer-dice">
+            </div>
+        </div>
+    </section>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
