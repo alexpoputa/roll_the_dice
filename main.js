@@ -16,6 +16,7 @@ const startGame = () => {
         scoreScreen.classList.add("fadeIn");
     });
 
+    // Display the modal on click
     infoButton.addEventListener("click", () => {
         infoPanel.style.display = "block";
     })
