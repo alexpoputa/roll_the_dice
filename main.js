@@ -28,33 +28,6 @@ const startGame = () => {
     }
 };
 
-// Print final result
-const finalResult = () => {
-    // If player score gets to 10, end the game and run finalScore function
-    if (pScore === 10) {
-        let r = confirm("Player won! Would you like to play again?");
-        if (r == true) {
-            pScore = 0;
-            cScore = 0;
-            updateScore();
-            return;
-        } else {
-            window.location.reload();
-        }
-        // If computer score gets to 10, end the game and run finalScore function
-    } else if (cScore === 10) {
-        let r = confirm("Computer won! Would you like to play again?");
-        if (r == true) {
-            pScore = 0;
-            cScore = 0;
-            updateScore();
-            return;
-        } else {
-            window.location.reload();
-        }
-    }
-};
-
 // Play Dices
 const playDices = () => {
     const rollBtn = document.querySelector(".roll-btn");
@@ -90,6 +63,34 @@ const updateScore = () => {
     playerScore.textContent = pScore;
     computerScore.textContent = cScore;
 }
+
+
+// Print final result
+const finalResult = () => {
+    // If player score gets to 10, end the game and run finalScore function
+    if (pScore === 10) {
+        let r = confirm("Player won! Would you like to play again?");
+        if (r == true) {
+            pScore = 0;
+            cScore = 0;
+            updateScore();
+            return;
+        } else {
+            window.location.reload();
+        }
+        // If computer score gets to 10, end the game and run finalScore function
+    } else if (cScore === 10) {
+        let r = confirm("Computer won! Would you like to play again?");
+        if (r == true) {
+            pScore = 0;
+            cScore = 0;
+            updateScore();
+            return;
+        } else {
+            window.location.reload();
+        }
+    }
+};
 
 // Compare Dices
 const compareDices = (playerDice, computerDice) => {
@@ -127,3 +128,4 @@ const compareDices = (playerDice, computerDice) => {
 
 startGame();
 playDices();
+finalResult();

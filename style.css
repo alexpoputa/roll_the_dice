@@ -7,7 +7,7 @@
 
 section {
     height: 100vh;
-    background: #ADA996;
+    background: #ada996;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
     /* Chrome 10-25, Safari 5.1-6 */
@@ -41,6 +41,10 @@ section {
     justify-content: space-around;
     align-items: center;
     transition: opacity 0.5s ease;
+}
+
+.intro h1 {
+    font-size: 50px;
 }
 
 .intro p {
@@ -139,4 +143,52 @@ div.fadeOut {
 div.fadeIn {
     opacity: 1;
     pointer-events: all;
+}
+
+@media only screen and (max-width: 660px) {
+    .match-roll {
+        display: none;
+    }
+
+    .score,
+    .dices {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .dices {
+        margin-top: 70px;
+    }
+
+    .score h2,
+    .score p {
+        font-size: 25px;
+    }
+
+    .intro p {
+        font-size: 20px;
+    }
+
+    .intro h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .score h2,
+    .score p {
+        font-size: 15px;
+    }
+
+    .intro p {
+        font-size: 10px;
+    }
+
+    .intro h1 {
+        font-size: 30px;
+        text-align: center;
+    }
 }
