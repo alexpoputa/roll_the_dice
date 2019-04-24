@@ -16,6 +16,7 @@ const startGame = () => {
         scoreScreen.classList.add("fadeIn");
     });
 
+    // Display the modal on click
     infoButton.addEventListener("click", () => {
         infoPanel.style.display = "block";
     })
@@ -28,7 +29,38 @@ const startGame = () => {
     }
 };
 
+<<<<<<< HEAD
 // Play Dices
+=======
+// Print final result
+const finalResult = () => {
+    // If player score gets to 10, end the game and print the resul
+    if (pScore === 10) {
+        let r = confirm("Player won! Would you like to play again?");
+        if (r == true) {
+            pScore = 0;
+            cScore = 0;
+            updateScore();
+            return;
+        } else {
+            window.location.reload();
+        }
+        // If computer score gets to 10, end the game and run print the result
+    } else if (cScore === 10) {
+        let r = confirm("Computer won! Would you like to play again?");
+        if (r == true) {
+            pScore = 0;
+            cScore = 0;
+            updateScore();
+            return;
+        } else {
+            window.location.reload();
+        }
+    }
+};
+
+// Play Dices function
+>>>>>>> c41d4f9bad40304ef3006e510e9698b2f01814ba
 const playDices = () => {
     const rollBtn = document.querySelector(".roll-btn");
     const playerDice = document.querySelector(".player-dice");
@@ -36,6 +68,7 @@ const playDices = () => {
 
     // Computer options
     const computerOptions = [1, 2, 3, 4, 5, 6];
+    // Player options
     const playerOptions = [1, 2, 3, 4, 5, 6];
 
     rollBtn.addEventListener("click", function () {
@@ -50,7 +83,7 @@ const playDices = () => {
         // Call Compare Dices function
         compareDices(playerRoll, computerRoll);
 
-        // Update Images of Dices
+        // Update Images of dices
         playerDice.src = `./img/${"dice"+playerRoll}.png`;
         computerDice.src = `./img/${"dice"+computerRoll}.png`;
     });
@@ -104,7 +137,7 @@ const compareDices = (playerDice, computerDice) => {
         return;
     }
 
-    // Check for player win
+    // Check if player won
     if (playerDice > computerDice) {
         winner.textContent = "Player Wins!";
         // Increment player score if he wins
@@ -126,6 +159,10 @@ const compareDices = (playerDice, computerDice) => {
     }
 }
 
+// Run the functions
 startGame();
 playDices();
+<<<<<<< HEAD
 finalResult();
+=======
+>>>>>>> c41d4f9bad40304ef3006e510e9698b2f01814ba
