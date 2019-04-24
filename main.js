@@ -29,38 +29,7 @@ const startGame = () => {
     }
 };
 
-<<<<<<< HEAD
 // Play Dices
-=======
-// Print final result
-const finalResult = () => {
-    // If player score gets to 10, end the game and print the resul
-    if (pScore === 10) {
-        let r = confirm("Player won! Would you like to play again?");
-        if (r == true) {
-            pScore = 0;
-            cScore = 0;
-            updateScore();
-            return;
-        } else {
-            window.location.reload();
-        }
-        // If computer score gets to 10, end the game and run print the result
-    } else if (cScore === 10) {
-        let r = confirm("Computer won! Would you like to play again?");
-        if (r == true) {
-            pScore = 0;
-            cScore = 0;
-            updateScore();
-            return;
-        } else {
-            window.location.reload();
-        }
-    }
-};
-
-// Play Dices function
->>>>>>> c41d4f9bad40304ef3006e510e9698b2f01814ba
 const playDices = () => {
     const rollBtn = document.querySelector(".roll-btn");
     const playerDice = document.querySelector(".player-dice");
@@ -162,7 +131,3 @@ const compareDices = (playerDice, computerDice) => {
 // Run the functions
 startGame();
 playDices();
-<<<<<<< HEAD
-finalResult();
-=======
->>>>>>> c41d4f9bad40304ef3006e510e9698b2f01814ba
